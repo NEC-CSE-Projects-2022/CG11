@@ -1,0 +1,273 @@
+/* ---------- Base Layout ---------- */
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafaff;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- Navbar ---------- */
+/* -------- Navbar Pure CSS -------- */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 0.7rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Replace: flex flex-wrap justify-center gap-6 md:gap-10 text-sm md:text-base font-medium */
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* gap-6 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Larger screens spacing */
+@media (min-width: 768px) {
+  .navbar-list {
+    gap: 2.5rem; /* md:gap-10 */
+    font-size: 1rem; /* md:text-base */
+  }
+}
+
+/* Navbar links */
+.navbar-list a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.navbar-list a:hover {
+  color: #ffe066;
+  border-bottom: 2px solid #ffe066;
+}
+
+/* Active route */
+.navbar-list .active {
+  color: #ffe066 !important;
+  border-bottom: 2px solid #ffe066 !important;
+}
+
+
+/* ---------- Title Bar ---------- */
+
+
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* ---------- Validation Page ---------- */
+.validation-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Footer ---------- */
+footer,
+.footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #4b2bb3;
+  border-top: 2px solid #e5d6ff;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 1.2rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  /* Mobile: slightly smaller logo & title */
+  .title-bar-logo {
+    height: 50px;
+  }
+
+  .title-bar-heading {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------ Validation Page (Pure CSS) ------ */
+
+.validation-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e9f1ff, #dce8ff);
+  padding: 140px 20px 40px; 
+  box-sizing: border-box;
+}
+
+.validation-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4b2bb3;
+  margin-bottom: 20px;
+}
+
+.validation-error-box {
+  max-width: 550px;
+  margin: 0 auto 20px;
+  padding: 12px 18px;
+  border: 1px solid #ff9494;
+  background: #ffe5e5;
+  color: #c40000;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.validation-card {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+.validation-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.validation-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.validation-button {
+  width: 100%;
+  padding: 12px;
+  background: #3366ff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.validation-button:hover {
+  background: #264dcc;
+}
+
+.validation-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.validation-status {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.validation-graph-container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.validation-graph {
+  max-width: 90%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.validation-next-btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #0b8f3c;
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.validation-next-btn:hover {
+  background: #06732f;
+}
+
+.validation-next-btn:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.validation-hint {
+  margin-top: 50px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}

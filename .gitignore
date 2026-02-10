@@ -1,0 +1,21 @@
+# Ignore everything
+*
+
+# Allow source code only
+!Source Code/
+!Source Code/frontend/
+!Source Code/backend/
+!Source Code/frontend/**
+!Source Code/backend/**
+
+# Allow basic files
+!.gitignore
+!README.md
+
+# Never allow large stuff
+*.zip
+venv/
+env/
+node_modules/
+Datasets/
+Documents/
