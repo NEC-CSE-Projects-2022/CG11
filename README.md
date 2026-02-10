@@ -1,5 +1,6 @@
 
-# CG11 – Review-enhanced contrastive learning on knowledge graphs for recommendation
+# CG11 – CONTRASTIVE LEARNING:A DEEP LEARNING FRAMEWORK FOR REVIEW-BASED KNOWLEDGE GRAPHS
+
 
 ## Team Info
 - 22471A05H0 — Makkena Rajeswari (https://www.linkedin.com/in/rajeswari-makkena-77b649276 )
@@ -132,5 +133,6 @@ Future work includes multimodal reviews (images, audio), temporal GNNs, and real
 The proposed system is deployed as a client–server architecture, where the backend is implemented using Flask and exposes RESTful APIs for model inference and knowledge graph generation. The trained contrastive GNN models are loaded at runtime to support real-time predictions. The frontend communicates with the backend through secure HTTP requests. For production deployment, the backend can be hosted using Gunicorn with Nginx, ensuring scalability, reliability, and efficient request handling. This deployment setup enables seamless integration, easy scalability, and practical real-world usage.
 
 ---
+
 
 
