@@ -1,5 +1,5 @@
 
-# CG11 – Project Title
+# CG11 – Review-enhanced contrastive learning on knowledge graphs for recommendation
 
 ## Team Info
 - 22471A05H0 — Makkena Rajeswari (https://www.linkedin.com/in/rajeswari-makkena-77b649276 )
@@ -19,7 +19,7 @@ Graph-based learning has gained popularity as a robust solution for modeling ent
 ---
 
 ## Paper Reference (Inspiration)
-👉 **[Review-enhanced contrastive learning on knowledge graphs for 
+**[Review-enhanced contrastive learning on knowledge graphs for 
 recommendation
   – Author Names Yun Liua,Natthawut Kertkeidkachorn, Jun Miyazaki, Ryutaro Ichise
  ]https://www.sciencedirect.com/science/article/pii/S0957417425008723**
@@ -132,4 +132,5 @@ Future work includes multimodal reviews (images, audio), temporal GNNs, and real
 The proposed system is deployed as a client–server architecture, where the backend is implemented using Flask and exposes RESTful APIs for model inference and knowledge graph generation. The trained contrastive GNN models are loaded at runtime to support real-time predictions. The frontend communicates with the backend through secure HTTP requests. For production deployment, the backend can be hosted using Gunicorn with Nginx, ensuring scalability, reliability, and efficient request handling. This deployment setup enables seamless integration, easy scalability, and practical real-world usage.
 
 ---
+
 
